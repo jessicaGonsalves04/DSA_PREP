@@ -15,7 +15,7 @@ using namespace std;
 void bubbleSort(int arr[],int n){
     for(int i=n-1;i>0;i--){
         int didSwap=0;
-        for(int j=0;j<=i;j++){
+        for(int j=0;j<i;j++){
         if(arr[j]>arr[j+1]){
             int temp =arr[j];
             arr[j]=arr[j+1];
@@ -24,7 +24,7 @@ void bubbleSort(int arr[],int n){
             }
         }
         if(didSwap==0){
-            break;
+            break;//This ensures that if no swap occured between the elements the the array is is a sorted fashion thus it takes O(n) in that case
         }
     }
 }
